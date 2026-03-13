@@ -127,7 +127,7 @@ button {
 .site-nav a {
   position: relative;
   padding-bottom: 0.15rem;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--color-body);
   transition: color var(--transition-fast);
 }
@@ -634,14 +634,14 @@ select:focus {
 
   .site-header .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 1.25rem 0;
   }
 
   .site-nav {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.85rem 1.1rem;
   }
 
@@ -706,7 +706,7 @@ select:focus {
 
   .site-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .button {
