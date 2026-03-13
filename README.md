@@ -83,14 +83,14 @@ All image references are relative, so the site remains GitHub Pages compatible.
 
 The contact form is configured to submit through FormSubmit:
 
-- `https://formsubmit.co/info@rsjworks.com`
+- `https://formsubmit.co/hello@rsj.works`
 
 FormSubmit is compatible with static sites and includes reCAPTCHA/spam protection by default.
 
 Important:
 
 1. Submit the form once after deployment.
-2. FormSubmit will send a confirmation email to `info@rsjworks.com`.
+2. FormSubmit will send a confirmation email to `hello@rsj.works`.
 3. Open that email and activate the form endpoint.
 
 After that, form submissions will be delivered to the inbox.
