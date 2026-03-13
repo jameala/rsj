@@ -94,6 +94,7 @@ button {
   border-bottom: 1px solid rgba(216, 210, 200, 0.85);
   background: rgba(247, 245, 241, 0.94);
   backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(29, 29, 27, 0.04);
 }
 
 .site-header .container {
@@ -127,7 +128,9 @@ button {
 .site-nav a {
   position: relative;
   padding-bottom: 0.15rem;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: var(--color-body);
   transition: color var(--transition-fast);
 }
@@ -347,6 +350,22 @@ p {
   max-width: 46rem;
 }
 
+.section-header::before {
+  content: "";
+  width: 3.5rem;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.section-copy {
+  margin-bottom: var(--space-lg);
+  max-width: 54rem;
+}
+
+.section-action {
+  margin-top: var(--space-xl);
+}
+
 .split-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
@@ -380,7 +399,7 @@ p {
 .panel {
   border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.38);
   box-shadow: var(--shadow-soft);
 }
 
@@ -388,6 +407,14 @@ p {
   display: grid;
   gap: var(--space-md);
   padding: clamp(1.25rem, 2vw, 1.75rem);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background: rgba(140, 116, 80, 0.7);
 }
 
 .panel {
@@ -429,7 +456,7 @@ p {
 .feature-list li {
   min-height: 100%;
   padding: 1.35rem 1.25rem;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.46);
   color: var(--color-ink);
   font-weight: 500;
 }
@@ -457,7 +484,7 @@ p {
   overflow: hidden;
   min-height: 16rem;
   border: 1px solid var(--color-line);
-  border-radius: var(--radius-lg);
+  border-radius: 1rem;
   background:
     linear-gradient(135deg, rgba(216, 210, 200, 0.7), rgba(247, 245, 241, 0.95)),
     var(--color-panel);
@@ -491,6 +518,7 @@ p {
   background: transparent;
   color: var(--color-ink);
   font-weight: 500;
+  letter-spacing: 0.01em;
   transition:
     background-color var(--transition-fast),
     border-color var(--transition-fast),
@@ -544,8 +572,8 @@ p {
 }
 
 .surface-dark .panel {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(216, 210, 200, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(216, 210, 200, 0.15);
   box-shadow: none;
 }
 
@@ -623,6 +651,43 @@ select:focus {
   align-content: start;
 }
 
+.mini-contact-box {
+  position: relative;
+  gap: var(--space-sm);
+  max-width: 28rem;
+  padding: 1.4rem 0 1.4rem 1.6rem;
+  border: 0;
+  border-left: 1px solid rgba(217, 191, 150, 0.5);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mini-contact-links {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+.mini-contact-box .meta {
+  margin-bottom: 0.15rem;
+}
+
+.mini-contact-box .card-title {
+  max-width: 12ch;
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+}
+
+.mini-contact-box a[href^="mailto:"] {
+  font-size: 1.1rem;
+  color: var(--color-paper);
+}
+
+.mini-contact-box .button {
+  width: fit-content;
+  min-width: 12rem;
+}
+
 .site-footer {
   border-top: 1px solid var(--color-line);
   background: linear-gradient(180deg, rgba(216, 210, 200, 0.16), rgba(247, 245, 241, 0));
@@ -635,6 +700,7 @@ select:focus {
   gap: var(--space-md);
   padding: var(--space-lg) 0;
   text-align: center;
+  letter-spacing: 0.04em;
 }
 
 ::selection {
@@ -769,6 +835,10 @@ select:focus {
   .card,
   .panel {
     padding: 1.25rem;
+  }
+
+  .mini-contact-box {
+    padding: 1.1rem 0 0 1rem;
   }
 
   .image-frame {
