@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js-enabled");
+
 const menuToggle = document.querySelector(".menu-toggle");
 const primaryNavigation = document.querySelector(".site-nav");
 

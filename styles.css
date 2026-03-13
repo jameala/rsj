@@ -655,11 +655,11 @@ select:focus {
   position: relative;
   gap: var(--space-sm);
   max-width: 28rem;
-  padding: 1.4rem 0 1.4rem 1.6rem;
-  border: 0;
-  border-left: 1px solid rgba(217, 191, 150, 0.5);
-  border-radius: 0;
-  background: transparent;
+  padding: 1.5rem 1.5rem 1.5rem 1.6rem;
+  border: 1px solid rgba(217, 191, 150, 0.24);
+  border-left: 2px solid rgba(217, 191, 150, 0.58);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
   box-shadow: none;
 }
 
@@ -667,6 +667,7 @@ select:focus {
   display: grid;
   gap: var(--space-md);
   margin-top: var(--space-xs);
+  justify-items: start;
 }
 
 .mini-contact-box .meta {
@@ -674,18 +675,26 @@ select:focus {
 }
 
 .mini-contact-box .card-title {
-  max-width: 12ch;
+  max-width: 14ch;
   font-size: clamp(1.45rem, 2vw, 1.85rem);
+  line-height: 1.12;
+}
+
+.mini-contact-box p {
+  max-width: 30ch;
 }
 
 .mini-contact-box a[href^="mailto:"] {
   font-size: 1.1rem;
   color: var(--color-paper);
+  word-break: break-word;
 }
 
 .mini-contact-box .button {
   width: fit-content;
   min-width: 12rem;
+  align-self: start;
+  margin: 0;
 }
 
 .site-footer {
@@ -701,6 +710,11 @@ select:focus {
   padding: var(--space-lg) 0;
   text-align: center;
   letter-spacing: 0.04em;
+}
+
+.footer-stack {
+  display: grid !important;
+  gap: 0.35rem;
 }
 
 ::selection {
@@ -755,7 +769,7 @@ select:focus {
     gap: 0.75rem;
   }
 
-  .menu-toggle {
+  .js-enabled .menu-toggle {
     display: inline-flex !important;
   }
 
@@ -764,6 +778,15 @@ select:focus {
   }
 
   .site-nav {
+    width: 100%;
+    margin-top: 0.65rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem 1rem;
+    line-height: 1.2;
+  }
+
+  .js-enabled .site-nav {
     position: absolute;
     top: calc(100% + 0.45rem);
     left: 0;
@@ -774,26 +797,30 @@ select:focus {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0;
+    margin-top: 0;
     padding: 0.5rem 0;
     border: 1px solid rgba(216, 210, 200, 0.92);
     border-radius: 1rem;
     background: rgba(247, 245, 241, 0.98);
     box-shadow: 0 18px 32px rgba(29, 29, 27, 0.12);
-    line-height: 1.2;
   }
 
-  .site-nav.is-open {
+  .js-enabled .site-nav.is-open {
     display: flex;
   }
 
   .site-nav a {
-    display: block;
-    width: 100%;
-    padding: 0.9rem 1rem;
+    padding: 0.35rem 0;
     font-size: 1rem;
   }
 
-  .site-nav a::after {
+  .js-enabled .site-nav a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+  }
+
+  .js-enabled .site-nav a::after {
     display: none;
   }
 
@@ -838,7 +865,7 @@ select:focus {
   }
 
   .mini-contact-box {
-    padding: 1.1rem 0 0 1rem;
+    padding: 1.2rem;
   }
 
   .image-frame {
