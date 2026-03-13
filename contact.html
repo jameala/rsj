@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | RSJ Works</title>
+  <meta name="description" content="Contact RSJ Works about fabrication, bespoke countertops and commercial interior projects.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-brand" href="index.html" aria-label="RSJ Works home">
+        <img src="assets/logos/LOGO_BLK.png" alt="RSJ Works" class="site-logo">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="site-main">
+    <section class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Contact</h1>
+        <p>For fabrication enquiries, commercial interior work or early project discussions, contact RSJ Works directly.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout contact-layout">
+        <div class="stack stack-lg contact-details">
+          <div>
+            <p class="meta">Email</p>
+            <p><a href="mailto:info@rsjworks.com">info@rsjworks.com</a></p>
+          </div>
+          <div>
+            <p class="meta">Locations</p>
+            <p>London, United Kingdom</p>
+            <p>Satellite operations in Maine, USA</p>
+          </div>
+          <figure class="image-frame contact-figure">
+            <!-- replace with real general image -->
+            <img src="assets/images/general/contact-location.jpg" alt="Placeholder image for RSJ Works contact page">
+          </figure>
+        </div>
+
+        <section class="panel contact-panel" aria-labelledby="contact-form-title">
+          <p class="eyebrow">Project Enquiry</p>
+          <h2 id="contact-form-title">Contact form</h2>
+          <form action="https://formsubmit.co/info@rsjworks.com" method="post">
+            <input type="hidden" name="_subject" value="New RSJ Works website enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+            <label for="name">
+              Name
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label for="email">
+              Email
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </label>
+            <label for="company">
+              Company
+              <input id="company" name="company" type="text" placeholder="Company name">
+            </label>
+            <label for="message">
+              Project details
+              <textarea id="message" name="message" placeholder="Tell us about the project, site, timing or scope." required></textarea>
+            </label>
+            <button class="button" type="submit">Send Enquiry</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>RSJ Works 2026 &copy;</p>
+    </div>
+  </footer>
+</body>
+</html>
