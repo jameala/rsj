@@ -4,16 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!toggle || !nav) return;
 
-  const setOpen = (isOpen) => {
-    toggle.setAttribute("aria-expanded", String(isOpen));
-    nav.classList.toggle("open", isOpen);
+  const setOpen = (open) => {
+    toggle.setAttribute("aria-expanded", String(open));
+    nav.classList.toggle("open", open);
   };
 
   toggle.addEventListener("click", () => {
-    const isOpen = toggle.getAttribute("aria-expanded") === "true";
-    setOpen(!isOpen);
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    setOpen(!open);
   });
 
+  // Close nav when a link is activated (useful for mobile)
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setOpen(false));
   });
