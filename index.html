@@ -19,7 +19,13 @@
       <a class="site-brand" href="index.html" aria-label="RSJ Works home">
         <img src="assets/logos/LOGO_BLK.png" alt="RSJ Works" class="site-logo">
       </a>
-      <nav class="site-nav" aria-label="Primary">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -196,5 +202,6 @@
       <p>RSJ Works 2026 &copy;</p>
     </div>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
